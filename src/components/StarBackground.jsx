@@ -8,10 +8,20 @@ export const StarBackground = () => {
   // set star in useState
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
+  const [fallingStars, setFallingStars] = useState([]);
 
   useEffect(() => {
     generateStars();
     generateMeteors();
+    generateFallingStars();
+
+    const handleResize = () => {
+      generateStars();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // Generate stars
@@ -61,6 +71,30 @@ export const StarBackground = () => {
     }
     setMeteors(newMeteors);
   };
+
+  // falling stars
+  const generateFallingStars = () => {
+    // 1. Calculate number of falling stars
+    const numberOfFallingStars = 5;
+
+    // 2. Create an array of stars
+    const newFallingStars = [];
+
+    // 3. Generate random stars
+    for (let i = 0; i < numberOfFallingStars; i++) {
+      // 4. push stars to newStars obj
+      newFallingStars.push({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: Math.random() * 2 + 1,
+        delay: Math.random() * 10,
+        animationDuration: Math.random() * 4 + 2,
+      });
+    }
+
+    setFallingStars(newFallingStars);
+  };
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {stars.map((star) => (
@@ -88,6 +122,22 @@ export const StarBackground = () => {
             height: `${meteor.size}px`,
             animationDelay: `${meteor.delay}s`,
             animationDuration: `${meteor.animationDuration}s`,
+          }}
+        />
+      ))}
+
+      {/* falling stars  */}
+      {fallingStars.map((fallingStar) => (
+        <div
+          key={fallingStar.id}
+          className="meteor animate-meteor"
+          style={{
+            left: `${fallingStar.x}%`,
+            top: `${fallingStar.y}%`,
+            width: `${fallingStar.size}px`,
+            height: `${fallingStar.size}px`,
+            animationDelay: `${fallingStar.delay}s`,
+            animationDuration: `${fallingStar.animationDuration}s`,
           }}
         />
       ))}
