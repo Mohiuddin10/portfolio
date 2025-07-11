@@ -94,9 +94,28 @@ const skills = [
     level: 65,
     category: "Design",
   },
+
+  // Deployment
+  {
+    name: "Vercel",
+    level: 70,
+    category: "Deployment",
+  },
+  {
+    name: "Netlify",
+    level: 90,
+    category: "Deployment",
+  },
 ];
 
-const categories = ["all", "Frontend", "Backend", "Tools", "Design"];
+const categories = [
+  "all",
+  "Frontend",
+  "Backend",
+  "Tools",
+  "Design",
+  "Deployment",
+];
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");

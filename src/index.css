@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -29,6 +30,23 @@
       transform: translateY(-10px);
     }
   }
+  /* photo animation start  */
+  @keyframes left-right {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+  }
+
+  @keyframes animation {
+    float: 6s ease-in-out infinite;
+  }
+
+ 
+
+  /* photo animation end  */
   @keyframes pulse-subtle {
     0%,
     100% {
