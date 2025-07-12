@@ -7,10 +7,10 @@ const AboutSection = () => {
       <div className="container mx-auto max-w-5xl ">
         <div className="text-3xl md:text-4xl font-bold mb-12 text-center">
           <h2>
-          About <span className="text-primary"> Me</span>
-        </h2>
+            About <span className="text-primary"> Me</span>
+          </h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg">
@@ -31,7 +31,8 @@ const AboutSection = () => {
                 Get In Touch
               </a>
               <a
-                href="#contact"
+                href="/Mohammad_Mohiuddin_CV.pdf"
+                download={true}
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 {""}

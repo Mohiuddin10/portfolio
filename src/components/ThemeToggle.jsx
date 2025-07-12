@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export const ThemeToggle = () => {
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -19,11 +19,11 @@ export const ThemeToggle = () => {
 
   const toggleTheme = () => {
     if (isDarkMode) {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("light");
       localStorage.setItem("theme", "light");
       setDarkMode(false);
     } else {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.add("light");
       localStorage.setItem("theme", "dark");
       setDarkMode(true);
     }
@@ -37,7 +37,7 @@ export const ThemeToggle = () => {
         "focus:outline-hidden"
       )}
     >
-      {isDarkMode ? (
+      {!isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />
       ) : (
         <Moon className="h-6 w-6 text-blue-900" />

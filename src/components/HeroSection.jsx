@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="">
           <img
             src="/Sujon.jpg"
-            className="max-w-sm max-h-sm rounded-full shadow-lg drop-shadow-2xl hover:scale-150 transition-transform duration-500 opacity-80 hover:opacity-100 animate-float"
+            className="max-w-sm max-h-sm object-cover rounded-full shadow-xl/30 drop-shadow-2xl hover:scale-105 outline-2 outline-offset-4 transition-transform duration-500 opacity-60 hover:opacity-80 animate-float"
             alt="Profile_image"
           />
         </div>
