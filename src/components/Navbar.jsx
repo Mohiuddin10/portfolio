@@ -74,7 +74,7 @@ export const Navbar = () => {
               : "opacity-0 pointer-events-none"
           )}
         >
-          <div className="flex flex-col space-y-8 text-xl">
+          <div className="flex flex-col mt-10 space-y-8 text-xl">
             {navItems.map((item, key) => (
               <a
                 key={key}

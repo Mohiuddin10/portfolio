@@ -3,13 +3,13 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Tech Blog Post",
+    title: "Smile Care Dental",
     description:
-      "A blogging platform for tech enthusiasts to share and discuss articles.",
-    image: "/projects/Project 1.png",
-    tags: ["React", "Node.js", "MongoDB"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A dental clinic website offering information about services, appointment booking, and patient resources.",
+    image: "/projects/SmileCare.png",
+    tags: ["Figma"],
+    demoUrl:
+      "https://www.figma.com/design/4kCbzWIFMuhjl1x5IztCuz/Smile-care-center?node-id=1-87&t=ZgPad9UTShvQhIFe-1",
   },
   {
     id: 2,
@@ -32,6 +32,15 @@ const projects = [
   },
   {
     id: 4,
+    title: "Movie App",
+    description: "A web application to manage movie listings and reviews.",
+    image: "/projects/MovieTicket.png",
+    tags: ["figma"],
+    demoUrl:
+      "https://www.figma.com/design/FW5XbvPX7ALgNAOCbeBLaZ/Movie?node-id=1-2&t=ZgPad9UTShvQhIFe-1",
+  },
+  {
+    id: 5,
     title: "MIM FITNESS GYM",
     description: "A web application to manage gym memberships and workouts.",
     image: "/projects/mim.png",
@@ -40,7 +49,7 @@ const projects = [
     githubUrl: "https://github.com/Mohiuddin10/mim-fitness-gym/tree/main",
   },
   {
-    id: 5,
+    id: 6,
     title: "Weather App",
     description: "A web application to display weather information.",
     image: "/projects/weather.png",
@@ -102,13 +111,15 @@ const ProjectsSections = () => {
                     >
                       <ExternalLink size={20} />
                     </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

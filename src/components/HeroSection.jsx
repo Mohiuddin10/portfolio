@@ -6,11 +6,11 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
-      <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 md:px-4">
+      <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 md:px-4 opacity-0 animate-fade-in-delay-4">
         <div className="">
           <img
             src="/Sujon.jpg"
-            className="max-w-sm max-h-sm object-cover rounded-full shadow-xl/30 drop-shadow-2xl hover:scale-105 outline-2 outline-offset-4 transition-transform duration-500 opacity-60 hover:opacity-80 animate-float"
+            className="w-40 mt-30 md:w-sm object-cover rounded-full shadow-xl/30 drop-shadow-2xl hover:scale-105 outline-2 outline-offset-4 transition-transform duration-500 opacity-60 hover:opacity-80 animate-float"
             alt="Profile_image"
           />
         </div>
