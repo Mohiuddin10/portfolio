@@ -51,3 +51,20 @@ Welcome to my **personal portfolio website**! This project showcases my skills, 
 ---
 
 ## 📁 Folder Structure (Simplified)
+
+portfolio/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── pages/
+│ ├── App.jsx
+│ └── main.jsx
+├── tailwind.config.js
+└── package.json
+
+🙋‍♂️ Author
+Mohammad Mohiuddin
+
+📜 License
+This project is licensed under the MIT License.

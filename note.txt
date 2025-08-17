@@ -4,3 +4,6 @@ packages:
 lucide-react ===> for icons
 lucide-react react-router-dom tailwind-merge
 @radix-ui/react-toast clsx
+
+
+now working in react typed

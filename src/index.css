@@ -183,3 +183,7 @@
   padding: 0;
   text-align: center;
 }
+
+.fira-code {
+  font-family: 'Fira Code', monospace;
+}
