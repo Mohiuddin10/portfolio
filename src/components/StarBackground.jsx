@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // start has : id, x, y, size, opacity, animationDuration
 
@@ -95,6 +95,29 @@ export const StarBackground = () => {
 
     setFallingStars(newFallingStars);
   };
+
+  // move of spaceship
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    function moveRandomly() {
+      const box = boxRef.current;
+      if (!box) return;
+      const maxX = window.innerWidth - box.offsetWidth;
+      const maxY = window.innerHeight - box.offsetHeight;
+
+      const randomX = Math.random() * maxX;
+      const randomY = Math.random() * maxY;
+
+      box.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+
+    moveRandomly(); // initial move
+    const interval = setInterval(moveRandomly, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+  // move of spaceship
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {stars.map((star) => (
@@ -141,6 +164,16 @@ export const StarBackground = () => {
           }}
         />
       ))}
+
+      {/* spaceship  */}
+      <img
+        ref={boxRef}
+        className="absolute top-0 left-0 w-20 h-20 rounded-md opacity-50 transition-all duration-1000"
+        src="/spaceship1.png"
+        alt=""
+      />
+
+      {/* spaceship  */}
     </div>
   );
 };

@@ -2,9 +2,7 @@ import { ArrowDown } from "lucide-react";
 import Typed from "typed.js";
 import { ReactTyped } from "react-typed";
 
-const intro = `a passionate Front-End Developer crafting responsive,
-              user-friendly web experiences with React, Next.js, and modern web
-              technologies.`;
+const intro = `A passionate web Developer`;
 
 const HeroSection = () => {
   return (
@@ -23,7 +21,7 @@ const HeroSection = () => {
 
         {/* details  */}
 
-        <div className="container max-w-4xl mx-auto text-center z-10 flex ">
+        <div className="container max-w-4xl mx-auto text-center z-10 flex">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               <span className="opacity-0 animate-fade-in">Hi, I'm</span>
@@ -37,26 +35,15 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            {/* <ReactTyped
-              className="text-green-400 text-4xl"
-              strings={[
-                "I love To write code",
-                "That looks like story",
-                "A story of success",
-              ]}
-              typeSpeed={40}
-              
-              attr="placeholder"
-              loop
-            >
-              <input type="text" />
-            </ReactTyped> */}
-
             <ReactTyped
-              className="text-lg md:text-xl text-muted-forground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 fira-code"
-              strings={[intro]}
+              className="text-lg md:text-xl text-muted-forground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 fira-code h-full text-right"
+              strings={[
+                "A passionate web Developer",
+                "I love turning ideas into clean, functional code ...",
+                "crafting every project like a meaningful story",
+              ]}
               typeSpeed={50}
-              backSpeed={10}
+              backSpeed={30}
               loop
             />
 

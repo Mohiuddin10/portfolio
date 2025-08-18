@@ -33,11 +33,18 @@ const AboutSection = () => {
               <a
                 href="/Mohammad_Mohiuddin_CV.pdf"
                 download={true}
+                className="text-primary px-6 py-2 rounded-full font-bold before:ease relative h-12 w-full md:w-40 my-auto overflow-hidden border border-primary shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-secoundery-500 hover:before:-translate-x-40"
+              >
+                Download CV
+              </a>
+              {/* <a
+                href="/Mohammad_Mohiuddin_CV.pdf"
+                download={true}
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 {""}
                 Download CV
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6">
@@ -47,7 +54,9 @@ const AboutSection = () => {
                   <Code className="w-6 h-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Web Development</h4>
+                  <h4 className="font-semibold text-lg">
+                    Front-End Development
+                  </h4>
                   <p className="text-muted-foreground">
                     Building responsive and interactive websites using modern
                     technologies.
@@ -75,10 +84,13 @@ const AboutSection = () => {
                   <Briefcase className="w-6 h-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Web Development</h4>
+                  <h4 className="font-semibold text-lg">
+                    Back-End Development
+                  </h4>
                   <p className="text-muted-foreground">
-                    Building responsive and interactive websites using modern
-                    technologies.
+                    architect and build scalable backend systems that ensure
+                    performance, security, and a seamless experience for end
+                    users.
                   </p>
                 </div>
               </div>
