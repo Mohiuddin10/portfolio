@@ -133,7 +133,7 @@ const SkillsSection = () => {
           {categories.map((category, key) => (
             <button
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-colors duration-300 capitalize border-neon",
                 activeCategory === category
                   ? "bg-primary text-primary text-foreground"
                   : "bg-secondery/70 text-foreground hover:bg-secondery"
@@ -149,7 +149,7 @@ const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover animate-float"
+              className="bg-card p-6 rounded-lg shadow-xs card-hover animate-float border-neon [--neon:119_101_255] hover:[--neon:214_229_235] transition-shadow duration-800"
             >
               <div className="text-left mb-4">
                 <h3 className="font-semibold text-lg">{skill.name}</h3>

@@ -187,3 +187,41 @@
 .fira-code {
   font-family: 'Fira Code', monospace;
 }
+
+/* Dynamic neon border/glow utility */
+@utility border-neon {
+  /* Tunables (override with CSS variables or Tailwind arbitrary props) */
+  --neon: 56 189 248;     /* default: cyan  => rgb(56,189,248) */
+  --neon-alpha: .9;       /* outer glow intensity */
+  --neon-size: .55rem;    /* glow thickness */
+  --speed: 2200ms;        /* pulse speed */
+
+  position: relative;
+  border: 2px solid rgb(var(--neon)); /* crisp neon edge */
+
+  /* soft outer + inner glow */
+  box-shadow:
+    0 0 calc(var(--neon-size) * .9)  rgb(var(--neon) / .7),
+    inset 0 0 calc(var(--neon-size) * .6) rgb(var(--neon) / .35);
+
+  /* extra bloom around the element */
+  filter: drop-shadow(0 0 calc(var(--neon-size) * 0.8) rgb(var(--neon) / var(--neon-alpha)));
+
+  /* breathing pulse */
+  animation: neon-pulse var(--speed) linear infinite alternate;
+}
+
+@keyframes neon-pulse {
+  0% {
+    box-shadow:
+      0 0 calc(var(--neon-size) * .8)  rgb(var(--neon) / .55),
+      inset 0 0 calc(var(--neon-size) * .5) rgb(var(--neon) / .30);
+    filter: drop-shadow(0 0 calc(var(--neon-size) * 1.1) rgb(var(--neon) / .75));
+  }
+  100% {
+    box-shadow:
+      0 0 calc(var(--neon-size) * 1.8) rgb(var(--neon) / .95),
+      inset 0 0 calc(var(--neon-size) * 1.1) rgb(var(--neon) / .50);
+    filter: drop-shadow(0 0 calc(var(--neon-size) * 2.2) rgb(var(--neon) / .85));
+  }
+}
